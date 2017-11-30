@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@color/preview_bottom_toolbar_bg"
-        android:elevation="4dp"
+        android:elevation="2dp"
         tools:targetApi="lollipop">
 
         <TextView

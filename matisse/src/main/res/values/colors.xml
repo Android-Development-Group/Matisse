@@ -17,7 +17,7 @@
 <resources>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="preview_bottom_toolbar_bg">#CC000000</color>
+    <color name="preview_bottom_toolbar_bg">#22000000</color>
     <color name="preview_bottom_size">#61FFFFFF</color>
 
 </resources>
