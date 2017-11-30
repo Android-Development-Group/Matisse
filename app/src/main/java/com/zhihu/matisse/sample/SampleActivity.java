@@ -54,6 +54,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_main);
         findViewById(R.id.zhihu).setOnClickListener(this);
         findViewById(R.id.dracula).setOnClickListener(this);
+        findViewById(R.id.blackandwhite).setOnClickListener(this);
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -79,12 +80,10 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
                                             .choose(MimeType.ofAll(), false)
                                             .countable(true)
                                             .capture(true)
-                                            .captureStrategy(
-                                                    new CaptureStrategy(true, "com.zhihu.matisse.sample.fileprovider"))
+                                            .captureStrategy(new CaptureStrategy(true, "com.zhihu.matisse.sample.fileprovider"))
                                             .maxSelectable(9)
                                             .addFilter(new GifSizeFilter(320, 320, 5 * Filter.K * Filter.K))
-                                            .gridExpectedSize(
-                                                    getResources().getDimensionPixelSize(R.dimen.grid_expected_size))
+                                            .gridExpectedSize(getResources().getDimensionPixelSize(R.dimen.grid_expected_size))
                                             .restrictOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
                                             .thumbnailScale(0.85f)
                                             .imageEngine(new GlideEngine())
@@ -94,6 +93,15 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
                                     Matisse.from(SampleActivity.this)
                                             .choose(MimeType.ofImage())
                                             .theme(R.style.Matisse_Dracula)
+                                            .countable(false)
+                                            .maxSelectable(9)
+                                            .imageEngine(new PicassoEngine())
+                                            .forResult(REQUEST_CODE_CHOOSE);
+                                    break;
+                                case R.id.blackandwhite:
+                                    Matisse.from(SampleActivity.this)
+                                            .choose(MimeType.ofImage())
+                                            .theme(R.style.Matisse_BlackAndWhite)
                                             .countable(false)
                                             .maxSelectable(9)
                                             .imageEngine(new PicassoEngine())

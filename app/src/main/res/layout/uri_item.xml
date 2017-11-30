@@ -15,10 +15,10 @@
   limitations under the License.
   -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
 
     <TextView
         android:id="@+id/uri"
@@ -30,10 +30,10 @@
         android:paddingRight="8dp"
         android:paddingTop="4dp"
         android:text="@+id/uri"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorAccent"
         android:textSize="16sp"
         tools:text="content://media/external/images/media/12345"
-        tools:textColor="@android:color/black" />
+        tools:textColor="@color/colorAccent"/>
 
     <TextView
         android:id="@+id/path"
@@ -46,7 +46,7 @@
         android:paddingTop="2dp"
         android:text="@+id/uri"
         android:textColor="@android:color/white"
-        android:textSize="16sp"
+        android:textSize="12sp"
         tools:text="/storage/emulated/0/Pictures/JPEG_20170516_12345.jpg"
-        tools:textColor="@android:color/black" />
+        tools:textColor="@android:color/black"/>
 </LinearLayout>
